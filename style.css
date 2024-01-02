@@ -1,0 +1,192 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap');@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap');
+
+@font-face {
+    font-family: 'seolleimcool-SemiBold';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2312-1@1.1/seolleimcool-SemiBold.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+/*------------ FONT -------------*/
+/*
+    font-family: 'seolleimcool-SemiBold';
+    font-family: 'Noto Sans KR', sans-serif;
+*/
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Noto Sans KR', sans-serif;
+    text-decoration: none;
+    box-sizing: border-box;
+    color: #333;
+    list-style: none;
+}
+
+header{
+    width: 100%;
+    background: #fff;
+    position:sticky;
+    top:0;
+    z-index: 1;
+    box-shadow: 1px 0 1px #333;
+}
+
+header .logo{
+    text-align: center;
+    padding: 20px 0;
+}
+
+header .logo a{
+    font-family: 'seolleimcool-SemiBold';
+}
+
+.movie-search-title{
+    padding: 0 0 10px;
+    position: sticky;
+    top:0;
+}
+
+.movie-search-inner{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0;
+    gap: 10px;
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.movie-search-inner h2{
+    transform: translateY(-2px);
+}
+
+.movie-search{
+    position: relative;
+}
+
+.movie-search [type="text"]{
+    width: 300px;
+    padding: 5px 35px 5px 5px;
+    box-sizing: border-box;
+    text-indent: 5px;
+}
+
+.movie-search [type="text"]::placeholder{
+    color: #ccc;
+}
+.movie-search-text [type="text"]:focus{
+    outline: none;
+}
+
+.movie-search .fa-solid{
+    color: #ccc;
+    position: absolute;
+    right: 10px;
+    top: 0;
+    font-size: 18px;
+    transform: translateY(50%);
+    cursor: pointer;
+}
+
+.movie-search-inner button{
+    border: none;
+    background-color: #e7e7e7;
+    padding: 7px 10px;
+    cursor: pointer;
+    border-radius: 3px;
+}
+
+section{
+    width: 100%;
+    padding: 32px 20px 108px;
+}
+
+.card-inner ul{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+}
+
+.card-inner ul li{
+    width: 350px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+    text-align: center;
+    margin-top: 30px;
+}
+
+.card-inner ul li:hover{
+    box-shadow: 1px 1px 15px #ccc;
+}
+
+.card-inner ul li a img{
+    object-fit: cover;
+    width: 100%;
+    
+}
+
+.card-title-list{
+    padding: 15px 20px 30px;
+}
+
+.card-title-list h2{
+    line-height: 32px;
+    margin-bottom: 15px;
+}
+
+footer{
+    width: 100%;
+    padding: 30px 0;
+    background-color: #333;
+    text-align: center;
+    color: #fff;
+    font-size: 14px;
+    line-height: 24px;
+}
+
+footer > *{
+    color: #fff;
+}
+
+footer address ul{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+footer address li a i{
+    color:#fff;
+    font-size: 24px;
+    margin-top: 15px;
+}
+
+
+
+/* responsive */
+@media(max-width:600px){
+    .movie-search-inner{
+        flex-wrap: wrap;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .movie-search{
+        width: 100%;
+        padding: 0 20px;
+    }
+
+    .movie-search [type="text"]{
+        width: 100%;
+    }
+
+    .movie-search .fa-solid{
+        right: 6%;
+    }
+
+    .movie-search-inner button{
+        width: 92%;
+    }
+
+}
