@@ -1,131 +1,58 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>영화 검색 콜렉션</title>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>영화 검색 콜렉션</title>
 
-    <script src="https://kit.fontawesome.com/53932b056b.js" crossorigin="anonymous"></script>
+        <script src="https://kit.fontawesome.com/53932b056b.js" crossorigin="anonymous"></script>
 
-    <link rel="stylesheet" href="style.css">
-    <script defer src="main.js"></script>
-</head>
-<body>
-    <header>
-        <h1 class="logo">
-            <a href=""><i class="fa-solid fa-clapperboard"></i> 영화 검색 사이트 &#58;&#41;</a>
-        </h1>
-        <nav class="movie-search-title">
-            <div class="movie-search-inner">
-                <h2>영화 검색 : </h2>
-                <div class="movie-search">
-                    <input type="text" placeholder="영화 제목을 적어 주세요">
-                    <i class="fa-solid fa-magnifying-glass"></i>
+        <link rel="stylesheet" href="style.css">
+        <script defer src="main.js"></script>
+    </head>
+
+    <body>
+        <header>
+            <h1 class="logo">
+                <a href=""><i class="fa-solid fa-clapperboard"></i> 영화 검색 사이트 &#58;&#41;</a>
+            </h1>
+            <nav class="movie-search-title">
+                <form class="movie-search-inner">
+                    <h2>영화 검색 : </h2>
+                    <div class="movie-search">
+                        <input type="text" placeholder="영화 제목을 입력해 주세요.">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </div>
+                    <button id="search-btn">검색하기</button>
+                </form>
+            </nav>
+        </header>
+        <main>
+            <section>
+                <div class="card-inner">
+                    <ul class="card-list">
+                        <!-- <li class="movie-list">
+                            <a href="">
+                                <img src="${images}" alt="movie-images">
+                                <div class="card-title-list">
+                                    <h2>${title}</h2>
+                                    <p>${contents}</p>
+                                </div>
+                            </a>
+                        </li> -->
+                    </ul>
                 </div>
-                <button>검색하기</button>
-            </div>
-        </nav>
-    </header>
-    <main>
-        <section>
-            <div class="card-inner">
-                <ul class="card-list">
-                    <li>
-                        <a href="">
-                            <img src="images/image1.jpg" alt="movie-images">
-                            <div class="card-title-list">
-                                <h2>영화 제목</h2>
-                                <p>
-                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique eaque corporis sunt dignissimos accusantium ea distinctio placeat provident harum modi! Unde iure suscipit placeat similique vitae quaerat voluptates quidem nemo.
-                                </p>
-                            </div>
-                         
-                        </a>
-                    </li>
-                    <li>
-                        <a href="">
-                            <img src="images/image1.jpg" alt="movie-images">
-                            <div class="card-title-list">
-                                <h2>영화 제목</h2>
-                                <p>
-                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique eaque corporis sunt dignissimos accusantium ea distinctio placeat provident harum modi! Unde iure suscipit placeat similique vitae quaerat voluptates quidem nemo.
-                                </p>
-                            </div>
-                         
-                        </a>
-                    </li>
-                    <li>
-                        <a href="">
-                            <img src="images/image1.jpg" alt="movie-images">
-                            <div class="card-title-list">
-                                <h2>영화 제목</h2>
-                                <p>
-                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique eaque corporis sunt dignissimos accusantium ea distinctio placeat provident harum modi! Unde iure suscipit placeat similique vitae quaerat voluptates quidem nemo.
-                                </p>
-                            </div>
-                         
-                        </a>
-                    </li>
-                    <li>
-                        <a href="">
-                            <img src="images/image1.jpg" alt="movie-images">
-                            <div class="card-title-list">
-                                <h2>영화 제목</h2>
-                                <p>
-                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique eaque corporis sunt dignissimos accusantium ea distinctio placeat provident harum modi! Unde iure suscipit placeat similique vitae quaerat voluptates quidem nemo.
-                                </p>
-                            </div>
-                         
-                        </a>
-                    </li>
-                    <li>
-                        <a href="">
-                            <img src="images/image1.jpg" alt="movie-images">
-                            <div class="card-title-list">
-                                <h2>영화 제목</h2>
-                                <p>
-                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique eaque corporis sunt dignissimos accusantium ea distinctio placeat provident harum modi! Unde iure suscipit placeat similique vitae quaerat voluptates quidem nemo.
-                                </p>
-                            </div>
-                         
-                        </a>
-                    </li>
-                    <li>
-                        <a href="">
-                            <img src="images/image1.jpg" alt="movie-images">
-                            <div class="card-title-list">
-                                <h2>영화 제목</h2>
-                                <p>
-                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique eaque corporis sunt dignissimos accusantium ea distinctio placeat provident harum modi! Unde iure suscipit placeat similique vitae quaerat voluptates quidem nemo.
-                                </p>
-                            </div>
-                         
-                        </a>
-                    </li>
-                    <li>
-                        <a href="">
-                            <img src="images/image1.jpg" alt="movie-images">
-                            <div class="card-title-list">
-                                <h2>영화 제목</h2>
-                                <p>
-                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique eaque corporis sunt dignissimos accusantium ea distinctio placeat provident harum modi! Unde iure suscipit placeat similique vitae quaerat voluptates quidem nemo.
-                                </p>
-                            </div>
-                         
-                        </a>
-                    </li>
+            </section>
+        </main>
+        <footer>
+            <p class="copy">2024&copy;SeoyoungPark.</p>
+            <address>
+                <ul>
+                    <li><a href="https://github.com/seokachu" target="_blank" title="github 이동하기"><i
+                                class="fa-brands fa-github"></i></a></li>
+                    <li><a href="mailto:seokachuu@gmail.com" title="email"><i class="fa-solid fa-envelope"></i></a></li>
                 </ul>
-            </div>
-        </section>
-    </main>
-    <footer>
-        <p class="copy">2024&copy;SeoyoungPark.</p>
-        <address>
-            <ul>
-                <li><a href="https://github.com/seokachu" target="_blank" title="github 이동하기"><i class="fa-brands fa-github"></i></a></li>
-                <li><a href="mailto:seokachuu@gmail.com" title="email"><i class="fa-solid fa-envelope"></i></a></li>
-            </ul>
-        </address>
-    </footer>
-</body>
+            </address>
+        </footer>
+    </body>
 </html>
