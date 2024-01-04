@@ -20,7 +20,7 @@
                 <form class="movie-search-inner">
                     <h2>영화 검색 : </h2>
                     <div class="movie-search">
-                        <input type="text" placeholder="영화 제목을 입력해 주세요.">
+                        <input type="text" id="search_text" placeholder="영화 제목을 입력해 주세요.">
                         <i class="fa-solid fa-magnifying-glass"></i>
                     </div>
                     <button id="search-btn">검색하기</button>
@@ -36,6 +36,7 @@
                                 <img src="${images}" alt="movie-images">
                                 <div class="card-title-list">
                                     <h2>${title}</h2>
+                                    <p class="average">${vote_average}</p>
                                     <p>${contents}</p>
                                 </div>
                             </a>

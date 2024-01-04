@@ -22,10 +22,10 @@ getMovies();
 const movieListContainer = document.querySelector('.card-list'); // ul
 const img_url = 'https://image.tmdb.org/t/p/w500';
 
-// 영화 이미지, 타이틀, 내용 불러오기
+/* 영화 이미지, 타이틀, 내용 불러오기 */
 function showMovies(data) {
     data.forEach((movie) => {
-        const { id, title, poster_path, overview } = movie;
+        const { id, title, poster_path, overview, vote_average } = movie; //각각 객체를 movie라는 이름으로 받아와서 사용함.(객체분해할당해줬음)
         const movieList = document.createElement('li');
         movieList.classList.add('movie-list');
         movieList.innerHTML = `
@@ -33,6 +33,7 @@ function showMovies(data) {
                 <img src="${img_url + poster_path}" alt="${title}">
                 <div class="card-title-list">
                     <h2>${title}</h2>
+                    <p class="average">- 평점 : ${vote_average}</p>
                     <p>${overview}</p>
                 </div>
             </a>
@@ -54,8 +55,22 @@ function showMovies(data) {
 }
 
 
-//영화검색창 보이기 
-const searchBtn = document.getElementById('search-btn');
-searchBtn.addEventListener('click',function(){
 
+/* 영화검색창 보이기 */
+const searchTxt = document.getElementById('search-text');
+const searchBtn = document.getElementById('search-btn');
+
+//검색함수 정의
+function searchMovies(text){
+    const searchList = text.value.toLowerCase(); //받은 텍스트를 소문자로 먼저 변환해줌, value는 해당 요소의 값에 접근하는 속성임.
+    
+    //영화목록 필터링해서 가져오기
+    const filterMovies = showMovies().filter(function(){
+      
+    });
+};
+
+//검색버튼에 이벤트 리스너 추가하기
+searchBtn.addEventListener('click',function(){
+    searchMovies(searchTxt);
 });

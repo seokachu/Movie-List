@@ -131,13 +131,20 @@ section{
     padding: 15px 20px 30px;
 }
 
-.card-title-list h2{
+.card-title-list h2,
+.card-title-list p.average{
     line-height: 32px;
     margin-bottom: 15px;
+    font-family: 'seolleimcool-SemiBold';
 }
 
 .card-title-list p{
     font-size: 14px;
+}
+
+.card-title-list p.average{
+    font-size: 16px;
+    color: #409afa;
 }
 
 footer{
