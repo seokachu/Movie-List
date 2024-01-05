@@ -173,6 +173,25 @@ footer address li a i{
     margin-top: 15px;
 }
 
+/* go-top btn */
+.go-top{
+    position: fixed;
+    right: 10px;
+    bottom: 15px;
+    cursor: pointer;
+    display: none;
+}
+
+.go-top i{
+    font-size: 24px;
+    padding: 15px;
+    background-color: #ddd;
+    border-radius: 10px;
+}
+
+.go-top i:hover{
+    color: #409afa;
+}
 
 
 /* responsive */
@@ -200,21 +219,4 @@ footer address li a i{
         width: 92%;
     }
 
-}
-
-
-/* go-top btn */
-.go-top{
-    position: fixed;
-    right: 10px;
-    bottom: 15px;
-    cursor: pointer;
-    display: none;
-}
-
-.go-top i{
-    font-size: 24px;
-    padding: 15px;
-    background-color: #ddd;
-    border-radius: 10px;
 }
