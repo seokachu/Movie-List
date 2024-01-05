@@ -1,3 +1,5 @@
+let moviesList = []; //전역변수로 배열에 담아보자, 영화검색데이터 다시 배열로 담았음 (검색서치부분)
+
 /* api 불러오기 */
 const options = {
     method: 'GET',
@@ -14,12 +16,13 @@ const myAPI_KEY = '&api_key=99cccb5d776b9b9bae47492d28c19a38';
 function getMovies() {
     fetch(url, options)
         .then(response => response.json())
-        .then(data => showMovies(data.results))
+        .then(data => {
+            moviesList = data.results; //배열에 담음
+            showMovies(moviesList); // 영화 목록 보여주는 함수 호출
+        })
         .catch(err => console.error(err));
 }
 getMovies();
-
-
 
 // 변수 선언
 const movieListContainer = document.querySelector('.card-list'); // ul
@@ -27,10 +30,9 @@ const img_url = 'https://image.tmdb.org/t/p/w500';
 
 /* 영화 이미지, 타이틀, 내용 불러오기 */
 function showMovies(data) {
-
-    console.log(data);
     data.forEach((movie) => {
         const { id, title, poster_path, overview, vote_average } = movie; //각각 객체를 movie라는 이름으로 받아와서 사용함.(객체분해할당해줬음)
+       
         const movieList = document.createElement('li');
         movieList.classList.add('movie-list');
         movieList.innerHTML = `
@@ -45,7 +47,7 @@ function showMovies(data) {
         `;
         movieListContainer.appendChild(movieList);
     });
- 
+
     // 클릭시 id 알럿창 띄우기
     const movieId = document.querySelectorAll('.movie-list a'); //li a
 
@@ -61,20 +63,16 @@ function showMovies(data) {
 
 
 /* 영화검색창 보이기 */
+const searchTxt = document.getElementById('search-text');
 const searchBtn = document.getElementById('search-btn');
 
-searchBtn.addEventListener('click',function(){
-    let searchTxt = document.getElementById('search-text').value;
-    let card = document.querySelectorAll('.card-list > li > a');
-    console.log(card);
+searchBtn.addEventListener('click',function(e){
+    e.preventDefault();
+    const val = searchTxt.value;
+    let cards = document.querySelectorAll();
 
-    for (let i = 0; i < card.length; i++) {
-        let title = card[i].querySelector('h2').textContent;
-        console.log(title);
-    }
     //검색어로 영화를 검색하기
-    // console.log(val);
+    console.log(val);
     // showMovies(val);
-
-
+    
 });
