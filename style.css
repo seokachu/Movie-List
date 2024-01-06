@@ -22,6 +22,10 @@
     list-style: none;
 }
 
+body.active{
+    overflow: hidden;
+}
+
 header{
     width: 100%;
     background: #fff;
@@ -193,8 +197,82 @@ footer address li a i{
     color: #409afa;
 }
 
+/* modal */
+.modal-wrap{
+    position: fixed;
+    background-color: rgba(0,0,0,.8);
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    visibility: hidden;
+}
+
+.modal-wrap .modal{ 
+    max-width: 90%;
+    height: fit-content;
+    background-color: #fff;
+    position: relative;
+    padding: 50px 120px 50px 50px;
+    /* transform: translateY(100vh); */
+}
+
+.modal-wrap .close-btn{
+    position: absolute;
+    right: 20px;
+    top: 10px;
+    border: none;
+    background-color: transparent;
+    font-size: 32px;
+    cursor: pointer;
+}
+
+.modal-wrap .close-btn:hover{
+    color: #409afa;
+}
+
+.card-ids{
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    align-items: center;
+}
+
+.card-ids img{
+    width: 300px;
+}
+
+.movie-id-list h2{
+    font-family: 'seolleimcool-SemiBold';
+}
+
+.movie-id-list  p span{
+    display: inline-block;
+    font-size: 24px;
+    color:#409afa;
+}
+
+
 
 /* responsive */
+@media(max-width:768px){
+    .card-ids{
+        flex-wrap: wrap;
+        gap: 30px;
+    }
+
+    .modal-wrap .modal{
+        padding: 50px 20px 30px;
+    }
+}
+
+
 @media(max-width:600px){
     .movie-search-inner{
         flex-wrap: wrap;
