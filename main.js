@@ -110,7 +110,7 @@ function showMovies(data) {
 			<div class="card-ids">
 				<img src="${img_url + data[j]['poster_path']}" alt="${data[j]['title']}">
 				<div class="movie-id-list">
-					<h2>영화 ID은</h2>
+					<h2>영화 ID명은</h2>
 					<p><span>"${result}"</span> 입니다 &#58;&#41;</p>
 				</div>
 			</div>
