@@ -79,7 +79,7 @@ function showMovies(data) {
 
 ![Screenshot 2024-01-08 at 03 02 37-min](https://github.com/seokachu/movie/assets/116704646/3199776e-7ae7-4bf2-99fe-02144e808820)
 
-```
+```css
 .modal-wrap .modal.active{
     animation: modalup .3s .3s forwards;
 }
