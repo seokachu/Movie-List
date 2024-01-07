@@ -220,7 +220,11 @@ footer address li a i{
     background-color: #fff;
     position: relative;
     padding: 50px 120px 50px 50px;
-    /* transform: translateY(100vh); */
+    transform: translateY(100vh);
+}
+
+.modal-wrap .modal.active{
+    animation: modalup .3s .3s forwards;
 }
 
 .modal-wrap .close-btn{
@@ -272,6 +276,14 @@ footer address li a i{
     }
 }
 
+@keyframes modalup{
+    from{
+        transform: translateY(100vh);
+    }
+    to{
+        transform: translateY(0);
+    }
+}
 
 @media(max-width:600px){
     .movie-search-inner{

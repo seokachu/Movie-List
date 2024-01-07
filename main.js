@@ -99,6 +99,7 @@ function showMovies(data) {
 			modalBg.style.visibility = 'visible';
 			modal.style.visibility = 'visible';
 			document.body.classList.add('active');
+			modal.classList.add('active');
 
 			//모달 안에있는 내용이 계속 바뀌니까 초기화 해준다.
 			modal.innerHTML = '';
@@ -109,8 +110,8 @@ function showMovies(data) {
 			<div class="card-ids">
 				<img src="${img_url + data[j]['poster_path']}" alt="${data[j]['title']}">
 				<div class="movie-id-list">
-					<h2>"영화 ID명"은</h2>
-					<p><span>${result}</span> 입니다 &#58;&#41;</p>
+					<h2>영화 ID은</h2>
+					<p><span>"${result}"</span> 입니다 &#58;&#41;</p>
 				</div>
 			</div>
 			`;
@@ -133,6 +134,7 @@ function showMovies(data) {
 			modalBg.style.visibility = 'hidden';
 			modal.style.visibility = 'hidden';
 			document.body.classList.remove('active');
+			modal.classList.remove('active');
 		}	
 	
 }
