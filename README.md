@@ -14,11 +14,14 @@ function getMovies() {
 		.then(response => response.json())
 		.then(data => showMovies(data.results))
 		.catch(err => console.error(err));
+
 }
 ```
 
 
 ## 2. 검색창 구현
+![Screenshot 2024-01-08 at 03 28 34](https://github.com/seokachu/movie/assets/116704646/de0a2146-689f-4882-8cab-4a2d5f443e41)
+
 ```javascript
 let searchBtn = document.getElementById('search-btn');
 
