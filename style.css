@@ -262,7 +262,15 @@ footer address li a i{
     color:#409afa;
 }
 
-
+/* animation */
+@keyframes modalup{
+    from{
+        transform: translateY(100vh);
+    }
+    to{
+        transform: translateY(0);
+    }
+}
 
 /* responsive */
 @media(max-width:768px){
@@ -273,15 +281,6 @@ footer address li a i{
 
     .modal-wrap .modal{
         padding: 50px 20px 30px;
-    }
-}
-
-@keyframes modalup{
-    from{
-        transform: translateY(100vh);
-    }
-    to{
-        transform: translateY(0);
     }
 }
 
