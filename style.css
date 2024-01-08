@@ -105,6 +105,17 @@ section{
     padding: 32px 20px 108px;
 }
 
+section.active{
+    height: 100vh;
+}
+
+section .list-none{
+    text-align: center;
+    font-size: 2em;
+    padding: 50px 0;
+    display: none;
+}
+
 .card-inner ul{
     display: flex;
     flex-wrap: wrap;
